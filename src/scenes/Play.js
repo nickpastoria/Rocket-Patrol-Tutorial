@@ -51,7 +51,7 @@ class Play extends Phaser.Scene {
         // initialize score
         this.p1Score = 0;
 
-          // display score
+        // display score
         let scoreConfig = {
             fontFamily: 'Courier',
             fontSize: '28px',
@@ -113,8 +113,8 @@ class Play extends Phaser.Scene {
     update() {
         
         // check key input for restart
-        if (this.gameOver && Phaser.Input.Keyboard.JustDown(keyR)) {
-            this.scene.restart();
+        if (this.gameOver && Phaser.Input.Keyboard.JustDown(keyLEFT)) {
+            this.scene.start("menuScene");
         }
 
         this.starfield.tilePositionX -= 4;
